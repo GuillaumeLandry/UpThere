@@ -27,12 +27,17 @@
     <iframe *ngIf="selectedModel === 'sputnik'" width="100%" height="100%" src="https://sketchfab.com/models/f8f37bf684df4836961caa2491762843/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
     <iframe *ngIf="selectedModel === 'shuttle'" width="100%" height="100%" src="https://sketchfab.com/models/2f04130e3c78439d9765b5ac71b333d2/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
 
+    <br><br>
+    <br><br>
     <ion-card *ngIf="!selectedModel">
+
       <ion-card-header>
-        <ion-card-title>3D Models</ion-card-title>
+        <ion-card-title>Select a 3D model from top menu</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        Select an option from the top menu
+        Showcase made possible thanks to Nasa and Sketchfab<br>
+        <img src="./assets/images/logo-sketchfab-196x196.png" height="50%" width="50%" alt="sketchfab">
+        <img src="./assets/images/logo-nasa-196x196.png" height="50%" width="50%" alt="nasa">
       </ion-card-content>
     </ion-card>
 
