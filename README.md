@@ -11,6 +11,12 @@ App made with Ionic, Angular and capacitor.
 
 ## Project setup
 ```
+git clone https://github.com/GuillaumeLandry/UpThere.git
+```
+```
+cd UpThere
+```
+```
 npm install
 ```
 
@@ -28,3 +34,6 @@ npm run android
 ```
 npm run ios
 ```
+
+___________________________________________________________
+* Iphone in Space Image Credits: Erik Simonsen / Getty Images
