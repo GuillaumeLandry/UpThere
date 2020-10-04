@@ -14,6 +14,8 @@
       <ion-select-option value="iss">ISS</ion-select-option>
       <ion-select-option value="atlas">Atlas V 501</ion-select-option>
       <ion-select-option value="moon">Moon</ion-select-option>
+      <ion-select-option value="sputnik">Sputnik</ion-select-option>
+      <ion-select-option value="shuttle">Space Shuttle</ion-select-option>
     </ion-select>
   </ion-item>
   
@@ -22,10 +24,12 @@
     <iframe *ngIf="selectedModel === 'iss'" src="https://solarsystem.nasa.gov/gltf_embed/2378" width="100%" height="100%" frameborder="0"></iframe>
     <iframe *ngIf="selectedModel === 'atlas'" src="https://solarsystem.nasa.gov/gltf_embed/2404" width="100%" height="100%" frameborder="0"></iframe>
     <iframe *ngIf="selectedModel === 'moon'" src="https://solarsystem.nasa.gov/gltf_embed/2366" width="100%" height="100%" frameborder="0"></iframe>
+    <iframe *ngIf="selectedModel === 'sputnik'" width="100%" height="100%" src="https://sketchfab.com/models/f8f37bf684df4836961caa2491762843/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+    <iframe *ngIf="selectedModel === 'shuttle'" width="100%" height="100%" src="https://sketchfab.com/models/2f04130e3c78439d9765b5ac71b333d2/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+
     <ion-card *ngIf="!selectedModel">
       <ion-card-header>
         <ion-card-title>3D Models</ion-card-title>
-        <ion-card-subtitle>What would you want to see?</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
         Select an option from the top menu
@@ -36,5 +40,6 @@
 </ion-content>
 
 <ion-footer>
-  <ion-button href="https://solarsystem.nasa.gov/" expand="full">NASA Solar System</ion-button>
+  <ion-button href="https://solarsystem.nasa.gov/" width="50%">NASA Solar System</ion-button>
+  <ion-button href="https://sketchfab.com/" width="50%">Sketchfab</ion-button>
 </ion-footer>

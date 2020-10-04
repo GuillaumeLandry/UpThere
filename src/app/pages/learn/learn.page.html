@@ -18,13 +18,32 @@
     <ion-segment-button value="instruments">
       <ion-label>Instruments</ion-label>
     </ion-segment-button>
+    <ion-segment-button value="history">
+      <ion-label>History</ion-label>
+    </ion-segment-button>
   </ion-segment>
 
+  <!--LAUNCH-->
   <ion-text *ngIf="selectedTab === 'launch'">
-    <h3>Launch vehicle 1</h3>
-    <p>Space X, etc.<br></p>
+    <h3>Rockets</h3>
+    <img src="./assets/learnContent/rockets.jpg" alt="rockets">
+    <p>Used to escape earth atmosphere and propulse
+      a probe to the desired altitude / velocity<br></p>
+    <p>The vehicle used depends on the weight of the payload and
+      the desired altitude for the mission.<br></p>
+    <h5>Examples:</h5>
+    <p>The Space Shuttle launched Hubble Telescope<br></p>
+    <p>The Delta 2 rocket launched NOAA satellites<br></p>
   </ion-text> 
+
+  <!--ORBITS-->
   <ion-text *ngIf="selectedTab === 'orbits'">
+    <h3>What is an orbit?</h3>
+    <img src="./assets/learnContent/gravity.png" alt="gravity scheme">
+    <p>Orbit: Curved path (circular or elliptical) around another object<br></p>
+    <p>Gravity: Cause of attraction of bodies.<br></p>
+    <p>Angular Momentum: Force acquired with speed around a body<br></p>
+    <p>Given enough momentum, the two forces balance, resulting in an orbital path.<br></p>
     <h3>LEO</h3>
     <img src="./assets/learnContent/LEO.png" alt="LEO scheme">
     <p>Low Earth Orbit: 160 to 1000 km altitude.<br></p>
@@ -45,10 +64,23 @@
     <p>Typically: Communication satellites<br></p>
     <br><br>
   </ion-text>
+
+  <!--INSTRUMENTS-->
   <ion-text *ngIf="selectedTab === 'instruments'">
-    <h3>Instrument 1</h3>
+    <h3>Reaction Wheels</h3>
+    <img src="./assets/learnContent/reactionWheel.jpg" alt="reaction wheels">
     <p>Reaction Wheels<br></p>
   </ion-text>
+
+
+  <!--HISTORY-->
+  <ion-text *ngIf="selectedTab === 'history'">
+    <h3>Sputnik</h3>
+    <img src="./assets/learnContent/sputnik.jpg" alt="sputnik">
+    <p>First satellite to go to space<br></p>
+  </ion-text>
+
+  <!--NO TAB SELECTED-->
   <br><br>
   <br><br>
   <ion-card *ngIf="!selectedTab">
@@ -57,7 +89,9 @@
       <ion-card-subtitle>What would you want to learn?</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      Select an option on the top menu
+      Select an option on the top menu.<br>
+      Don't forget to visit the 3D models showcase!<br>
+      Some elements discussed here can be found there.
     </ion-card-content>
   </ion-card>
 </ion-content>
