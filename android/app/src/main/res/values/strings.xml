@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">UpThere</string>
+    <string name="title_activity_main">UpThere</string>
+    <string name="package_name">com.upthere.app</string>
+    <string name="custom_url_scheme">com.upthere.app</string>
+</resources>

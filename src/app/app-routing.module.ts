@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { HomeModule } from './pages/home/home.module';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'folder/Inbox',
-    pathMatch: 'full'
+    path: '', component: HomeModule
   },
-  {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  }
+  {path: 'pages/Home', loadChildren: () => import('./pages/home/home.module').then( m => m.HomeModule)},
+  {path: 'pages/Over', loadChildren: () => import('./pages/over/over.module').then( m => m.OverModule)},
+  {path: 'pages/About', loadChildren: () => import('./pages/about/about.module').then( m => m.AboutModule)},
+  {path: 'pages/Learn', loadChildren: () => import('./pages/learn/learn.module').then( m => m.LearnModule)},
+  {path: 'pages/Search', loadChildren: () => import('./pages/search/search.module').then( m => m.SearchModule)},
 ];
 
 @NgModule({
