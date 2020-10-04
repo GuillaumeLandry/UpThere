@@ -7,6 +7,8 @@ Learn, see, interact with space technology.<br/><br/>
 
 App made with Ionic, Angular and capacitor.
 
+![App Logo](src/assets/images/logoPng.png)
+
 ## Project setup
 ```
 npm install
@@ -14,7 +16,7 @@ npm install
 
 ### Run on a webserver
 ```
-npm run serve
+npm run web
 ```
 
 ### Tun on android

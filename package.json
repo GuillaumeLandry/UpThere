@@ -4,9 +4,9 @@
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
-    "android": "ng build && npx cap sync android && npx cap open android",
-    "ios": "ng build && npx cap sync ios && npx cap open ios",
-    "web": "ng serve --open",
+    "android": "ng build --prod && npx cap sync android && npx cap open android",
+    "ios": "ng build --prod && npx cap sync ios && npx cap open ios",
+    "web": "ng serve --aot --open",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

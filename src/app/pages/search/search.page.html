@@ -8,16 +8,18 @@
 </ion-header>
 
 <ion-content fullscreen>
- <ion-searchbar></ion-searchbar>
+  <ion-searchbar></ion-searchbar><br>
+  <ion-label justify-content="center">**Click on a probe card to access website**</ion-label><br>
   <ion-list *ngFor="let probe of probes">
-      <ion-card (click)="onProbeClick()">
-        <ion-img [src]=""></ion-img>
+      <ion-card (click)="onProbeClick(probe.url)">
+        <ion-img [src]="probe.img" width="10%" height="10%"></ion-img>
         <ion-card-header>
           <ion-card-title>{{probe.name}}</ion-card-title>
-          <ion-card-subtitle>{{probe.purpose}}</ion-card-subtitle>
+          <ion-card-subtitle>{{probe.purpose}}, {{probe.country}}
+          </ion-card-subtitle>
         </ion-card-header>
         <ion-card-content>
-          {{probe.country}}
+          {{probe.description}}
         </ion-card-content>
       </ion-card>
   </ion-list>
