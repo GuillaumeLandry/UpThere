@@ -6,3 +6,30 @@
     <ion-title>Learn</ion-title>
   </ion-toolbar>
 </ion-header>
+
+<ion-content>
+  <ion-segment scrollable (ionChange)="segmentChanged($event)" value="orbits">
+    <ion-segment-button value="probes">
+      <ion-label>Probes</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="orbits">
+      <ion-label>Orbits</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="instruments">
+      <ion-label>Instruments</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-text *ngIf="selectedTab">
+    <h3>H3: The quick brown fox jumps over the lazy dog</h3>
+  </ion-text>  
+  <ion-text *ngIf="selectedTab === orbits">
+    <h3>H3: The the lazy dog</h3>
+  </ion-text>
+  <ion-text *ngIf="selectedTab === instruments">
+    <h3>H3: The the lazsefsefsefsefsesefy dog</h3>
+  </ion-text>
+  <ion-text *ngIf="!selectedTab">
+    <h3>What would you want to learn?</h3>
+  </ion-text>
+</ion-content>
