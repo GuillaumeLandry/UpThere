@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>3D Models</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fill="100%">
+  <ion-item>
+    <ion-select placeholder="Select Model" [(ngModel)]="selectedModel" (ngModelChange)="segmentChanged($event)" expand="full" text-wrap>
+      <ion-select-option value="hubble">Hubble Space Telescope</ion-select-option>
+      <ion-select-option value="iss">ISS</ion-select-option>
+      <ion-select-option value="atlas">Atlas V 501</ion-select-option>
+      <ion-select-option value="moon">Moon</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
+  <ion-content fill="100%">
+    <iframe *ngIf="selectedModel === 'hubble'" src="https://solarsystem.nasa.gov/gltf_embed/2383" width="100%" height="100%" frameborder="0"></iframe>
+    <iframe *ngIf="selectedModel === 'iss'" src="https://solarsystem.nasa.gov/gltf_embed/2378" width="100%" height="100%" frameborder="0"></iframe>
+    <iframe *ngIf="selectedModel === 'atlas'" src="https://solarsystem.nasa.gov/gltf_embed/2404" width="100%" height="100%" frameborder="0"></iframe>
+    <iframe *ngIf="selectedModel === 'moon'" src="https://solarsystem.nasa.gov/gltf_embed/2366" width="100%" height="100%" frameborder="0"></iframe>
+    <ion-card *ngIf="!selectedModel">
+      <ion-card-header>
+        <ion-card-title>3D Models</ion-card-title>
+        <ion-card-subtitle>What would you want to see?</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        Select an option from the top menu
+      </ion-card-content>
+    </ion-card>
+
+  </ion-content>
+</ion-content>
+
+<ion-footer>
+  <ion-button href="https://solarsystem.nasa.gov/" expand="full">NASA Solar System</ion-button>
+</ion-footer>

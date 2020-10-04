@@ -13,14 +13,19 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Home',
+      title: 'Earth globe',
       url: '/pages/Home',
-      icon: 'globe'
+      icon: 'earth'
     },
     {
-      title: 'Over',
+      title: 'Over Me Now',
       url: '/pages/Over',
       icon: 'planet'
+    },
+    {
+      title: '3D Models',
+      url: '/pages/Models',
+      icon: 'color-fill'
     },
     {
       title: 'Learn',
@@ -38,8 +43,29 @@ export class AppComponent implements OnInit {
       icon: 'information-circle'
     },
   ];
-  public labels = ['NASA', 'CSA', 'JAXA', 'CNES', 'EESA'];
-
+  public partners = [
+    {
+      name: "NASA",
+      url: "https://www.nasa.gov/"
+    },
+    {
+      name: "CSA",
+      url: "https://www.asc-csa.gc.ca/"
+    },
+    {
+      name: "JAXA",
+      url: "https://global.jaxa.jp/"
+    },
+    {
+      name: "ESA",
+      url: "https://cnes.fr/fr/"
+    },
+    {
+      name: "CNES",
+      url: "https://www.esa.int/"
+    },
+  ]
+  
   constructor(
     private platform: Platform,
   ) {

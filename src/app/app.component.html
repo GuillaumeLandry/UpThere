@@ -15,11 +15,11 @@
         </ion-list>
 
         <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
+          <ion-list-header>Thanks to</ion-list-header>
 
-          <ion-item *ngFor="let label of labels" lines="none">
+          <ion-item *ngFor="let partner of partners" href="{{partner.url}}" button="true" detail="true" lines="none">
             <ion-icon slot="start" name="link-outline"></ion-icon>
-            <ion-label>{{ label }}</ion-label>
+            <ion-label>{{ partner.name }}</ion-label>
           </ion-item>
         </ion-list>
       </ion-content>

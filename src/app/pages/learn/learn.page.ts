@@ -13,10 +13,8 @@ export class LearnPage implements OnInit {
 
   ngOnInit() {}
 
-  segmentChanged(tab: any) {
-    this.selectedTab = tab;
-    console.log(this.selectedTab)
-    console.log(tab)
+  segmentChanged(selectedTab: string) {
+    this.selectedTab = selectedTab;
   }
 
 }

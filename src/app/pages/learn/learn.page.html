@@ -8,9 +8,9 @@
 </ion-header>
 
 <ion-content>
-  <ion-segment scrollable (ionChange)="segmentChanged($event)" value="orbits">
-    <ion-segment-button value="probes">
-      <ion-label>Probes</ion-label>
+  <ion-segment [(ngModel)]="selectTab" (ngModelChange)="segmentChanged($event)" scrollable>
+    <ion-segment-button value="launch">
+      <ion-label>Launch</ion-label>
     </ion-segment-button>
     <ion-segment-button value="orbits">
       <ion-label>Orbits</ion-label>
@@ -20,16 +20,44 @@
     </ion-segment-button>
   </ion-segment>
 
-  <ion-text *ngIf="selectedTab">
-    <h3>H3: The quick brown fox jumps over the lazy dog</h3>
-  </ion-text>  
-  <ion-text *ngIf="selectedTab === orbits">
-    <h3>H3: The the lazy dog</h3>
+  <ion-text *ngIf="selectedTab === 'launch'">
+    <h3>Launch vehicle 1</h3>
+    <p>Space X, etc.<br></p>
+  </ion-text> 
+  <ion-text *ngIf="selectedTab === 'orbits'">
+    <h3>LEO</h3>
+    <img src="./assets/learnContent/LEO.png" alt="LEO scheme">
+    <p>Low Earth Orbit: 160 to 1000 km altitude.<br></p>
+    <p>Typically: Earth imaging and weather satellites.<br></p>
+    <p>The International Space station at 400 km.<br></p>
+    <p>The Hubble Space telescope at 555 km.<br></p>
+    <br><br>
+    <h3>MEO</h3>
+    <img src="./assets/learnContent/MEO.png" alt="MEO scheme">
+    <p>Medium Earth Orbits: Between LEO and GEO<br></p>
+    <p>Typically: Global positioning systems (GPS)<br></p>
+    <p>Galileo satellites Constellation to provide large coverage.<br></p>
+    <br><br>
+    <h3>GEO</h3>
+    <img src="./assets/learnContent/GEO.png" alt="GEO scheme">
+    <p>Geostationary orbit: Follows the equator at 35 700km<br></p>
+    <p>Maintain relative position over one particular area<br></p>
+    <p>Typically: Communication satellites<br></p>
+    <br><br>
   </ion-text>
-  <ion-text *ngIf="selectedTab === instruments">
-    <h3>H3: The the lazsefsefsefsefsesefy dog</h3>
+  <ion-text *ngIf="selectedTab === 'instruments'">
+    <h3>Instrument 1</h3>
+    <p>Reaction Wheels<br></p>
   </ion-text>
-  <ion-text *ngIf="!selectedTab">
-    <h3>What would you want to learn?</h3>
-  </ion-text>
+  <br><br>
+  <br><br>
+  <ion-card *ngIf="!selectedTab">
+    <ion-card-header>
+      <ion-card-title>Discover</ion-card-title>
+      <ion-card-subtitle>What would you want to learn?</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Select an option on the top menu
+    </ion-card-content>
+  </ion-card>
 </ion-content>
