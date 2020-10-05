@@ -19,7 +19,5 @@ export class GeolocationService {
     this.position = await Geolocation.getCurrentPosition();
     this.latitude = this.position.coords.latitude;
     this.longitude = this.position.coords.longitude;
-    console.log("Your latitude: " + this.latitude);
-    console.log("Your longitude: " + this.longitude);
   }
 }

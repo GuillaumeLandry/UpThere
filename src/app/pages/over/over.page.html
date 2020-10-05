@@ -8,6 +8,16 @@
 </ion-header>
 
 <ion-content fill="100%">
+  <ion-card (click)="onGetLocationClick()">
+    <!--<ion-img [src]="probe.img" width="10%" height="10%"></ion-img>-->
+    <ion-card-header>
+      <ion-card-title>Click to get your geolocation</ion-card-title>
+    </ion-card-header>
+    <ion-card-content *ngIf="latitude || longitude">
+      Your geolocation is:<br>
+      Latitude: {{latitude}}<br>
+      Longitude: {{longitude}}<br>
+    </ion-card-content>
+  </ion-card>
   <img src="./assets/images/pageInDeveloppement.png" alt="Over Page">
 </ion-content>
-
